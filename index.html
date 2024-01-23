@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS DO SLIDE===============-->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <!--=============== CSS DA PAGINA===============-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Fire Mangas</title>
+</head>
+
+<body>
+    <header>
+        <nav id="menu" class="nav-bar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/fire-mangas-high-resolution-logo-transparent.png" alt="Fire Mangas" width="160px">
+                </a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Mangas</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Recentes</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Mais Lidos</a></li>
+                </ul>
+            </div>
+
+            <div class="right">
+                <form action="./pesquisa.php" method="get" autocomplete="off">
+                    <div class="search-bar">
+                        <input type="text" class="search-txt" placeholder="Pesquisar...">
+                        <button type="submit" class="sbutton"><img src="./assets/img/loupe_black.svg" alt="lupa" height="13" width="15"></button>
+                    </div>
+                </form>
+                <div class="login-button">
+                    <button class="btnLogin-popup"><a href="#"><img src="./assets/img/login2.svg" alt="login" height="20" width="20"></a></button>
+                </div>
+            </div>
+            <div>
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt=""></button>
+                </div>
+            </div>
+
+            <div>
+                <div class="mobile-menu-icon">
+                    <button onclick="searchShow()"><img class="icone" src="assets/img/search1.svg" alt=""></button>
+                </div>
+                        </nav>
+                        <div class="search-menu">
+                <form action="./pesquisa.php" method="get" autocomplete="off">
+                     <div class="search-bar-menu">
+                         <input type="text" class="search-txt" placeholder="Pesquisar...">
+                         <button type="submit" class="sbutton"><img src="./assets/img/loupe_black.svg" alt="lupa" height="13" width="15"></button>
+                     </div>
+                 </form>
+            </div>
+            
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+            </ul>
+        </div>
+    </header>
+
+<!--===Começa configs do menu de login===-->
+<div class="center-wrapper">
+    <div class="wrapper">
+        <span class="icon-close">
+            <a href="#"><img src="assets/img/close_white_36dp.svg" alt="Fechar Login"></a>
+        </span>
+        <div class="form-box login">
+            <h2>Entrar</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="email" placeholder="Email" required>
+                    <label for="Email"></label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="password" placeholder="Senha" required>
+                    <label for="Password"></label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Lembrar-me</label>
+                    <a href="#">Esqueceu senha?</a>
+                </div>
+                <button type="submit" class="btn">Entrar</button>
+                <div class="login-register">
+                <p>Não tem conta ?
+                    <a href="#" class="register-link">Registrar</a>
+                </p>
+            </div>
+            </form>
+        </div>
+    
+        <div class="form-box register">
+            <h2>Cadastrar</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="text" placeholder="Nome de Usuário" required>
+                    <label for="Username"></label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="email" placeholder="Email" required>
+                    <label for="Email"></label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="password" placeholder="Senha" required>
+                    <label for="Password"></label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Eu aceito os termos e condições.</label>
+    
+                </div>
+                <button type="submit" class="btn">Registrar</button>
+                <div class="login-register">
+                <p>Já tem uma conta ?
+                    <a href="#" class="login-link">Entrar</a>
+                </p>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+ <!--=== Começa configs do Slide===-->
+    <main>
+        <legend><h2>Pupular Hoje</h2></legend>
+        <section class="container">
+            <div class="card__container swiper">
+               <div class="card__content">
+                  <div class="swiper-wrapper">
+                     <article class="card__article swiper-slide">
+                        <div class="card__image">
+                           <img src="./assets/img/slides/avatar-1.png" alt="image" class="card__img">
+                           <div class="card__shadow"></div>
+                        </div>
+         
+                        <div class="card__data">
+                           <h3 class="card__name">Solo Leveling</h3>
+                           <p class="card__description">
+                              Capítulo 200
+                           </p>
+         
+                           <a href="#" class="card__button">Leia agora</a>
+                        </div>
+                     </article>
+         
+                     <article class="card__article swiper-slide">
+                        <div class="card__image">
+                           <img src="./assets/img/slides/avatar-2.png" alt="image" class="card__img">
+                           <div class="card__shadow"></div>
+                        </div>
+         
+                        <div class="card__data">
+                           <h3 class="card__name">Tales of Demons and Gods</h3>
+                           <p class="card__description">
+                             Capítulo 460.5
+                           </p>
+         
+                           <a href="#" class="card__button">Leia agora</a>
+                        </div>
+                     </article>
+         
+                     <article class="card__article swiper-slide">
+                        <div class="card__image">
+                           <img src="./assets/img/slides/avatar-3.png" alt="image" class="card__img">
+                           <div class="card__shadow"></div>
+                        </div>
+         
+                        <div class="card__data">
+                           <h3 class="card__name">The Beginning After The End</h3>
+                           <p class="card__description">
+                              Capítulo 175.11
+                           </p>
+         
+                           <a href="#" class="card__button">Leia agora</a>
+                        </div>
+                     </article>
+         
+                     <article class="card__article swiper-slide">
+                        <div class="card__image">
+                           <img src="./assets/img/slides/avatar-4.png" alt="image" class="card__img">
+                           <div class="card__shadow"></div>
+                        </div>
+         
+                        <div class="card__data">
+                           <h3 class="card__name">Martial Peak</h3>
+                           <p class="card__description">
+                              Capítulo 3652
+                           </p>
+         
+                           <a href="#" class="card__button">Leia agora</a>
+                        </div>
+                     </article>
+   
+                     <article class="card__article swiper-slide">
+                        <div class="card__image">
+                           <img src="./assets/img/slides/avatar-5.png" alt="image" class="card__img">
+                           <div class="card__shadow"></div>
+                        </div>
+         
+                        <div class="card__data">
+                           <h3 class="card__name">Global Martial Artist</h3>
+                           <p class="card__description">
+                              Capítulo 115
+                           </p>
+         
+                           <a href="#" class="card__button">Leia agora</a>
+                        </div>
+                     </article>
+                  </div>
+               </div>
+   
+               <!-- Navigation buttons -->
+               <div class="swiper-button-next">
+                  <i class="ri-arrow-right-s-line"></i>
+               </div>
+               
+               <div class="swiper-button-prev">
+                  <i class="ri-arrow-left-s-line"></i>
+               </div>
+            </div>
+
+         </section>
+
+        <div class="containers">
+
+            <div class="last-update">
+                <legend><h3>Últimas Atualizações</h3></legend>
+                <div class="mangaka">
+                    <div class="mangas">
+                        <img src="assets/img/slides/avatar-1.png" alt="">
+                        <div class="infos">
+                            <h4>Solo Leveling</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Capitulo 500</a>
+                                    <a href="#">Capitulo 499</a>
+                                    <a href="#">Capitulo 498</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mangas">
+                        <img src="assets/img/slides/avatar-2.png" alt="">
+                        <div class="infos">
+                            <h4>Tales of Daemon and Gods</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Capitulo 387</a>
+                                    <a href="#">Capitulo 386</a>
+                                    <a href="#">Capitulo 385</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mangas">
+                        <img src="assets/img/slides/avatar-3.png" alt="">
+                        <div class="infos">
+                            <h4>The Beginning After End</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Capitulo 500</a>
+                                    <a href="#">Capitulo 499</a>
+                                    <a href="#">Capitulo 498</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mangas">
+                        <img src="assets/img/slides/avatar-4.png" alt="">
+                        <div class="infos">
+                            <h4>Martial Peak</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Capitulo 500</a>
+                                    <a href="#">Capitulo 499</a>
+                                    <a href="#">Capitulo 498</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mangas">
+                        <img src="assets/img/slides/avatar-5.png" alt="">
+                        <div class="infos">
+                            <h4>Global Martial Artist</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Capitulo 500</a>
+                                    <a href="#">Capitulo 499</a>
+                                    <a href="#">Capitulo 498</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mangas">
+                        <img src="assets/img/slides/avatar-1.png" alt="">
+                        <div class="infos">
+                            <h4>Solo Leveling</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Capitulo 500</a>
+                                    <a href="#">Capitulo 499</a>
+                                    <a href="#">Capitulo 498</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mangas">
+                        <img src="assets/img/slides/avatar-2.png" alt="">
+                        <div class="infos">
+                            <h4>Tales of Daemon and Gods</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Capitulo 500</a>
+                                    <a href="#">Capitulo 499</a>
+                                    <a href="#">Capitulo 498</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mangas">
+                        <img src="assets/img/slides/avatar-3.png" alt="">
+                        <div class="infos">
+                            <h4>The Beginning After End</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Capitulo 500</a>
+                                    <a href="#">Capitulo 499</a>
+                                    <a href="#">Capitulo 498</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mangas">
+                        <img src="assets/img/slides/avatar-4.png" alt="">
+                        <div class="infos">
+                            <h4>Martial Peak</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Capitulo 500</a>
+                                    <a href="#">Capitulo 499</a>
+                                    <a href="#">Capitulo 498</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mangas">
+                        <img src="assets/img/slides/avatar-5.png" alt="">
+                        <div class="infos">
+                            <h4>Global Martial Artist</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Capitulo 500</a>
+                                    <a href="#">Capitulo 499</a>
+                                    <a href="#">Capitulo 498</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mangas">
+                        <img src="assets/img/slides/avatar-1.png" alt="">
+                        <div class="infos">
+                            <h4>Solo Leveling</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Capitulo 500</a>
+                                    <a href="#">Capitulo 499</a>
+                                    <a href="#">Capitulo 498</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mangas">
+                        <img src="assets/img/slides/avatar-2.png" alt="">
+                        <div class="infos">
+                            <h4>Tales of Daemon and Gods</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Capitulo 500</a>
+                                    <a href="#">Capitulo 499</a>
+                                    <a href="#">Capitulo 498</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mangas">
+                        <img src="assets/img/slides/avatar-3.png" alt="">
+                        <div class="infos">
+                            <h4>The Beginning After End</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Capitulo 500</a>
+                                    <a href="#">Capitulo 499</a>
+                                    <a href="#">Capitulo 498</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mangas">
+                        <img src="assets/img/slides/avatar-4.png" alt="">
+                        <div class="infos">
+                            <h4>Martial Peak</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Capitulo 500</a>
+                                    <a href="#">Capitulo 499</a>
+                                    <a href="#">Capitulo 498</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="more-read">
+                <legend><h3>Os Mais Lidos</h3></legend>
+                <div class="mangaka-read">
+                    <div class="mangas-img">
+                        <img src="assets/img/slides/avatar-2.png" alt="">
+
+                        <div class="infos-read">
+                            <h4>Tales of Daemon and Gods</h4>
+                            <ul>
+                                <li><p>Generos: </p>
+                                    <a href="#">Ação</a><p>,</p>
+                                    <a href="#">Aventura</a><p>,</p>
+                                    <a href="#">Fantasia</a><p>,</p>
+                                    <a href="#">manhwa</a><p>,</p>
+                                    <a href="#">Shounen</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="mangaka-read">
+                    <div class="mangas-img">
+                        <img src="assets/img/slides/avatar-1.png" alt="">
+                        <div class="infos-read">
+                            <h4>Solo Leveling</h4>
+                                <ul>
+                                    <li><p>Generos: </p>
+                                        <a href="#">Ação</a><p>,</p>
+                                        <a href="#">Aventura</a><p>,</p>
+                                        <a href="#">Fantasia</a><p>,</p>
+                                        <a href="#">manhwa</a><p>,</p>
+                                        <a href="#">Shounen</a><p>,</p>
+                                        <a href="#">luta</a>
+                                    </li>
+                                </ul>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="mangaka-read">
+                    <div class="mangas-img">
+                        <img src="assets/img/slides/avatar-4.png" alt="">
+                    
+                        <div class="infos-read">
+                            <h4>Martial Perk</h4>
+                        
+                                <ul>
+                                    <li><p>Generos: </p>
+                                        <a href="#">Ação</a><p>,</p>
+                                        <a href="#">Aventura</a><p>,</p>
+                                        <a href="#">Fantasia</a><p>,</p>
+                                        <a href="#">manhwa</a><p>,</p>
+                                        <a href="#">Shounen</a><p>,</p>
+                                        <a href="#">luta</a><p>,</p>
+                                        <a href="#">Romance</a>
+                                    </li>
+                                </ul>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="mangaka-read">
+                    <div class="mangas-img">
+                        <img src="assets/img/slides/avatar-3.png" alt="">
+                    
+                        <div class="infos-read">
+                            <h4>The Beginning After End</h4>
+                        
+                                <ul>
+                                    <li><p>Generos: </p>
+                                        <a href="#">Ação</a><p>,</p>
+                                        <a href="#">Aventura</a><p>,</p>
+                                        <a href="#">manhwa</a><p>,</p>
+                                        <a href="#">Romance</a><p>,</p>
+                                        <a href="#">Espiritos</a>
+                                    </li>
+                                </ul>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="mangaka-read">
+                    <div class="mangas-img">
+                        <img src="assets/img/slides/avatar-5.png" alt="">
+                    
+                        <div class="infos-read">
+                            <h4>Global Martial Artist</h4>
+                        
+                                <ul>
+                                    <li><p>Generos: </p>
+                                        <a href="#">Ação</a><p>,</p>
+                                        <a href="#">Aventura</a><p>,</p>
+                                        <a href="#">manhwa</a><p>,</p>
+                                        <a href="#">Dinheiro</a><p>,</p>
+                                        <a href="#">Simulação</a>
+                                    </li>
+                                </ul>
+        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mangaka-read">
+                    <div class="mangas-img">
+                        <img src="assets/img/slides/avatar-2.png" alt="">
+
+                        <div class="infos-read">
+                            <h4>Tales of Daemon and Gods</h4>
+                            <ul>
+                                <li><p>Generos: </p>
+                                    <a href="#">Ação</a><p>,</p>
+                                    <a href="#">Aventura</a><p>,</p>
+                                    <a href="#">Fantasia</a><p>,</p>
+                                    <a href="#">manhwa</a><p>,</p>
+                                    <a href="#">Shounen</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="mangaka-read">
+                    <div class="mangas-img">
+                        <img src="assets/img/slides/avatar-1.png" alt="">
+                        <div class="infos-read">
+                            <h4>Solo Leveling</h4>
+                                <ul>
+                                    <li><p>Generos: </p>
+                                        <a href="#">Ação</a><p>,</p>
+                                        <a href="#">Aventura</a><p>,</p>
+                                        <a href="#">Fantasia</a><p>,</p>
+                                        <a href="#">manhwa</a><p>,</p>
+                                        <a href="#">Shounen</a><p>,</p>
+                                        <a href="#">luta</a>
+                                    </li>
+                                </ul>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="mangaka-read">
+                    <div class="mangas-img">
+                        <img src="assets/img/slides/avatar-4.png" alt="">
+                    
+                        <div class="infos-read">
+                            <h4>Martial Perk</h4>
+                        
+                                <ul>
+                                    <li><p>Generos: </p>
+                                        <a href="#">Ação</a><p>,</p>
+                                        <a href="#">Aventura</a><p>,</p>
+                                        <a href="#">Fantasia</a><p>,</p>
+                                        <a href="#">manhwa</a><p>,</p>
+                                        <a href="#">Shounen</a><p>,</p>
+                                        <a href="#">luta</a><p>,</p>
+                                        <a href="#">Romance</a>
+                                    </li>
+                                </ul>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="mangaka-read">
+                    <div class="mangas-img">
+                        <img src="assets/img/slides/avatar-3.png" alt="">
+                    
+                        <div class="infos-read">
+                            <h4>The Beginning After End</h4>
+                        
+                                <ul>
+                                    <li><p>Generos: </p>
+                                        <a href="#">Ação</a><p>,</p>
+                                        <a href="#">Aventura</a><p>,</p>
+                                        <a href="#">manhwa</a><p>,</p>
+                                        <a href="#">Romance</a><p>,</p>
+                                        <a href="#">Espiritos</a>
+                                    </li>
+                                </ul>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="mangaka-read">
+                    <div class="mangas-img">
+                        <img src="assets/img/slides/avatar-5.png" alt="">
+                    
+                        <div class="infos-read">
+                            <h4>Global Martial Artist</h4>
+                        
+                                <ul>
+                                    <li><p>Generos: </p>
+                                        <a href="#">Ação</a><p>,</p>
+                                        <a href="#">Aventura</a><p>,</p>
+                                        <a href="#">manhwa</a><p>,</p>
+                                        <a href="#">Dinheiro</a><p>,</p>
+                                        <a href="#">Simulação</a>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mangaka-read">
+                    <div class="mangas-img">
+                        <img src="assets/img/slides/avatar-2.png" alt="">
+
+                        <div class="infos-read">
+                            <h4>Tales of Daemon and Gods</h4>
+                            <ul>
+                                <li><p>Generos: </p>
+                                    <a href="#">Ação</a><p>,</p>
+                                    <a href="#">Aventura</a><p>,</p>
+                                    <a href="#">Fantasia</a><p>,</p>
+                                    <a href="#">manhwa</a><p>,</p>
+                                    <a href="#">Shounen</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="mangaka-read">
+                    <div class="mangas-img">
+                        <img src="assets/img/slides/avatar-1.png" alt="">
+                        <div class="infos-read">
+                            <h4>Solo Leveling</h4>
+                                <ul>
+                                    <li><p>Generos: </p>
+                                        <a href="#">Ação</a><p>,</p>
+                                        <a href="#">Aventura</a><p>,</p>
+                                        <a href="#">Fantasia</a><p>,</p>
+                                        <a href="#">manhwa</a><p>,</p>
+                                        <a href="#">Shounen</a><p>,</p>
+                                        <a href="#">luta</a>
+                                    </li>
+                                </ul>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="mangaka-read">
+                    <div class="mangas-img">
+                        <img src="assets/img/slides/avatar-4.png" alt="">
+                    
+                        <div class="infos-read">
+                            <h4>Martial Perk</h4>
+                        
+                                <ul>
+                                    <li><p>Generos: </p>
+                                        <a href="#">Ação</a><p>,</p>
+                                        <a href="#">Aventura</a><p>,</p>
+                                        <a href="#">Fantasia</a><p>,</p>
+                                        <a href="#">manhwa</a><p>,</p>
+                                        <a href="#">Shounen</a><p>,</p>
+                                        <a href="#">luta</a><p>,</p>
+                                        <a href="#">Romance</a>
+                                    </li>
+                                </ul>
+        
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div>
+                <img src="assets/img/fire-mangas-high-resolution-logo-transparent.png" alt="Fire Mangas" width="150px">
+            </div>
+            <div class="top-btn">
+              <a class="top" href="#">/\</a>
+            </div>
+        </div>
+        <div id="footer_copyright">
+            &#169
+            2023 all rights reserved
+        </div>
+    </footer>
+
+    <!--CONFIGURAÇOES DE COOKIES DO SITE-->
+    <div class="cookie" id="cookie">
+        <div class="cookie-txt">
+          <p>Este site usa cookies.
+          Usamos cookies para analisar o tráfego do site e otimizar sua experiência nele. Ao aceitar nosso uso de cookies, seus dados serão agregados com os dados de todos os demais usuários.</p>
+          <div class="cookie-btn">
+            <button onclick="aceito()">Aceito</button>
+          </div>
+        </div>
+      </div>
+    <script src="assets/js/script.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
