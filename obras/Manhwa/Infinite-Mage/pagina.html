@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Mage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="menu">
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="../../../index.html">
+                    <img src="assets/img/fire-mangas-high-resolution-logo-transparent.png" alt="Fire Mangas" width="160px">
+                </a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Mangas</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Recentes</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Mais Lidos</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt=""></button>
+                </div>
+            </div>
+        </nav>
+            
+            <div class="mobile-menu">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                </ul>
+            </div>
+    </header>
+    <main>
+        <div id="titulo">
+            <h1>Infinite Mage</h1>
+            <p>Todos capítulos estão em <a href="infinite-mage.html">Infinite Mage</a></p>
+        </div>
+        <div class="chapter-list">
+            <div id="chapter-content"></div>
+                    <select id="chapter-selector">
+                        <option value="1">Capítulo 1</option>
+                        <option value="2">Capítulo 2</option>
+                        <option value="3">Capítulo 3</option>
+                        <option value="4">Capítulo 4</option>
+                        <option value="5">Capítulo 5</option>
+                        <option value="6">Capítulo 6</option>
+                        <option value="7">Capítulo 7</option>
+                        <option value="8">Capítulo 8</option>
+                        <option value="9">Capítulo 9</option>
+                        <option value="10">Capítulo 10</option>
+                        <option value="11">Capítulo 11</option>
+                        <option value="12">Capítulo 12</option>
+                        <option value="13">Capítulo 13</option>
+                        <option value="14">Capítulo 14</option>
+                        <option value="15">Capítulo 15</option>
+                        <option value="16">Capítulo 16</option>
+                        <option value="17">Capítulo 17</option>
+                        <option value="18">Capítulo 18</option>
+                        <option value="19">Capítulo 19</option>
+                        <option value="20">Capítulo 20</option>
+                        <option value="21">Capítulo 21</option>
+                        <option value="22">Capítulo 22</option>
+                        <option value="23">Capítulo 23</option>
+                        <option value="24">Capítulo 24</option>
+                        <option value="25">Capítulo 25</option>
+                        <option value="26">Capítulo 26</option>
+                        <option value="27">Capítulo 27</option>
+                        <option value="28">Capítulo 28</option>
+                        <option value="29">Capítulo 29</option>
+                        <option value="30">Capítulo 30</option>
+                        <option value="31">Capítulo 31</option>
+                        <option value="32">Capítulo 32</option>
+                        <option value="33">Capítulo 33</option>
+                        <option value="34">Capítulo 34</option>
+                        <option value="35">Capítulo 35</option>
+                        <option value="36">Capítulo 36</option>
+                        <option value="37">Capítulo 37</option>
+                        <option value="38">Capítulo 38</option>
+                        <option value="39">Capítulo 39</option>
+                        <option value="40">Capítulo 40</option>
+                        <option value="41">Capítulo 41</option>
+                        <option value="42">Capítulo 42</option>
+                        <option value="43">Capítulo 43</option>
+                        <option value="44">Capítulo 44</option>
+                        <option value="45">Capítulo 45</option>
+                        <option value="46">Capítulo 46</option>
+                        <option value="47">Capítulo 47</option>
+                        <option value="48">Capítulo 48</option>
+                        <option value="49">Capítulo 49</option>
+                        <option value="50">Capítulo 50</option>
+                        <option value="51">Capítulo 51</option>
+                        <option value="52">Capítulo 52</option>
+                        <option value="53">Capítulo 53</option>
+                        <option value="54">Capítulo 54</option>
+                        <option value="55">Capítulo 55</option>
+                        <option value="56">Capítulo 56</option>
+                        <option value="57">Capítulo 57</option>
+                        <option value="58">Capítulo 58</option>
+                        <option value="59">Capítulo 59</option>
+                        <option value="60">Capítulo 60</option>
+                        <option value="61">Capítulo 61</option>
+                        <option value="62">Capítulo 62</option>
+                        <option value="63">Capítulo 63</option>
+                        <option value="64">Capítulo 64</option>
+                        <option value="65">Capítulo 65</option>
+                        <!-- Adicione mais opções conforme necessário -->
+                    </select>
+                    <button id="go-to-chapter">Ir para o Capítulo</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="manga-container">
+        </div>
+
+        <div id="controls">
+            <button id="zoom-in">Zoom In</button>
+            <button id="zoom-out">Zoom Out</button>
+        </div>
+        
+        <div id="bottom-controls">
+            <button id="previous-chapter">Capítulo Anterior</button>
+            <button id="next-chapter">Próximo Capítulo</button>
+        </div>
+    </main>
+    <!--BOTÃO VOLTAR AO TOPO-->
+    <button id="scrollToTopBtn" title="Voltar ao Topo">&#8593;</button>
+
+    <script src="mangaReader.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const chapterSelector = document.getElementById('chapter-selector');
+        const goToChapterButton = document.getElementById('go-to-chapter');
+
+        goToChapterButton.addEventListener('click', () => {
+            const selectedChapter = chapterSelector.value;
+            window.location.href = `pagina.html?chapter=${selectedChapter}`;
+        });
+
+        // Carrega o capítulo quando a página é carregada
+        const urlParams = new URLSearchParams(window.location.search);
+        const chapter = urlParams.get('chapter');
+        if (chapter) {
+            loadChapterContent(chapter);
+        }
+    });
+
+    function loadChapterContent(chapterNumber) {
+        const mangaContainer = document.getElementById('manga-container');
+        mangaContainer.innerHTML = ''; // Limpa o conteúdo atual
+
+        // Supondo que as imagens estejam na pasta Capitulos/capitulo{chapterNumber}/ e nomeadas como 1.jpg, 2.jpg, 3.jpg, etc.
+        const numPages = 22; // Número total de páginas por capítulo
+        for (let i = 0; i <= numPages; i++) {
+            const img = document.createElement('img');
+            img.src = `Capitulos/capitulo${chapterNumber}/${i}.jpg`; // Caminho para as imagens
+            mangaContainer.appendChild(img);
+        }
+    }
+</script>
+
+</body>
+</html>
