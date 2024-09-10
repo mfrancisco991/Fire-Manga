@@ -12,8 +12,12 @@
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
 
-    <!--=============== CSS DO SLIDE===============-->
+    <!--=============== CSS DO PRIMEIRO SLIDE===============-->
+    <link rel="stylesheet" href="./assets/css/slide1.css">
+
+    <!--=============== CSS DO SEGUNDO SLIDE===============-->
     <link rel="stylesheet" href="./assets/css/styles.css">
+
     <!--=============== CSS DA PAGINA===============-->
     <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -21,8 +25,8 @@
 </head>
 
 <body>
-    <header>
-        <nav id="menu" class="nav-bar">
+    <header id="menu">
+        <nav class="nav-bar">
             <div class="logo">
                 <a href="index.html">
                     <img src="assets/img/fire-mangas-high-resolution-logo-transparent.png" alt="Fire Mangas" width="160px">
@@ -37,109 +41,111 @@
             </div>
 
             <div class="right">
-                <form action="./pesquisa.php" method="get" autocomplete="off">
+                <!--<form action="./pesquisa.php" method="get" autocomplete="off">-->
                     <div class="search-bar">
-                        <input type="text" class="search-txt" placeholder="Pesquisar...">
-                        <button type="submit" class="sbutton"><img src="./assets/img/loupe_black.svg" alt="lupa" height="13" width="15"></button>
+                        <input type="text" id="search-txt" placeholder="Pesquisar..." onkeypress="handleKeyPress(event)">
+                        <button onclick="searchManga()" type="submit" class="sbutton"><img src="./assets/img/loupe_black.svg" alt="lupa" height="13" width="15"></button>
                     </div>
-                </form>
-                <div class="login-button">
-                    <button class="btnLogin-popup"><a href="#"><img src="./assets/img/login2.svg" alt="login" height="20" width="20"></a></button>
-                </div>
+               <!--</form>-->
             </div>
             <div>
                 <div class="mobile-menu-icon">
                     <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt=""></button>
                 </div>
             </div>
-
-            <div>
-                <div class="mobile-menu-icon">
-                    <button onclick="searchShow()"><img class="icone" src="assets/img/search1.svg" alt=""></button>
-                </div>
-                        </nav>
-                        <div class="search-menu">
-                <form action="./pesquisa.php" method="get" autocomplete="off">
-                     <div class="search-bar-menu">
-                         <input type="text" class="search-txt" placeholder="Pesquisar...">
-                         <button type="submit" class="sbutton"><img src="./assets/img/loupe_black.svg" alt="lupa" height="13" width="15"></button>
-                     </div>
-                 </form>
-            </div>
+        </nav>
             
-        <div class="mobile-menu">
-            <ul>
-                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
-            </ul>
-        </div>
+            <div class="mobile-menu">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                </ul>
+            </div>
     </header>
+<!--=== Começa configs do primeiro slide===-->
+<div class="slider-container">
+    <div class="slider">
+        <!-- Slide 1 -->
+        <div class="slide">
+            <div class="manga-box">
+                <div class="image">
+                    <img src="assets/img/slider/Black Clover.webp" alt="Capa do Mangá">
+                </div>
+                <div class="info">
+                    <h3>Último Capítulo: Capítulo 369</h3><br>
+                    <h2>Black Clover</h2><br>
+                    <p>Aventura, Ação, Fantasia</p><br>
+                    <p>Em um mundo cheio de magia, Asta – uma órfã que é excessivamente barulhenta e enérgica – não possui absolutamente nenhuma. Apesar disso, ele sonha em se tornar o Rei Mago</p>
+                    <a href="#" class="ler-agora-btn">Ler Agora</a>
+                </div>
+            </div>
+        </div>            
 
-<!--===Começa configs do menu de login===-->
-<div class="center-wrapper">
-    <div class="wrapper">
-        <span class="icon-close">
-            <a href="#"><img src="assets/img/close_white_36dp.svg" alt="Fechar Login"></a>
-        </span>
-        <div class="form-box login">
-            <h2>Entrar</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"></span>
-                    <input type="email" placeholder="Email" required>
-                    <label for="Email"></label>
+        <!-- Slide 2 -->
+        <div class="slide">
+            <div class="manga-box">
+                <div class="image">
+                    <img src="assets/img/slider/1.jpg" alt="Capa do Mangá">
                 </div>
-                <div class="input-box">
-                    <span class="icon"></span>
-                    <input type="password" placeholder="Senha" required>
-                    <label for="Password"></label>
+                <div class="info">
+                    <h3>Último Capítulo: Capítulo 65</h3> <br>
+                    <h2>Infinite Mage</h2><br>
+                    <p>Aventura, Ação, Fantasia, Magia</p><br>
+                    <p>O sonho de se tornar infinito de um ser humano é como uma explosão de supernova que se espalha na velocidade da luz! Esta é a história de uma criança chamada Shirone que foi abandonada em um estábulo, envolta em panos.</p>
+                    <a href="obras/Manhwa/Infinite-Mage/infinite-mage.html" class="ler-agora-btn">Ler Agora</a>
                 </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox"> Lembrar-me</label>
-                    <a href="#">Esqueceu senha?</a>
-                </div>
-                <button type="submit" class="btn">Entrar</button>
-                <div class="login-register">
-                <p>Não tem conta ?
-                    <a href="#" class="register-link">Registrar</a>
-                </p>
             </div>
-            </form>
         </div>
-    
-        <div class="form-box register">
-            <h2>Cadastrar</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"></span>
-                    <input type="text" placeholder="Nome de Usuário" required>
-                    <label for="Username"></label>
+        <!-- Repita a estrutura acima para mais slides -->
+        <div class="slide">
+            <div class="manga-box">
+                <div class="image">
+                    <img src="assets/img/slider/Kaiju-8-08.webp" alt="Capa do Mangá">
                 </div>
-                <div class="input-box">
-                    <span class="icon"></span>
-                    <input type="email" placeholder="Email" required>
-                    <label for="Email"></label>
+                <div class="info">
+                    <h3>Último Capítulo: Capítulo 100</h3><br>
+                    <h2>Kaijuu 8-gou</h2><br>
+                    <p>Aventura, Ação, Fantasia</p><br>
+                    <p>Monstros grotescos, semelhantes a Godzilla, chamados “kaijuu”, têm aparecido no Japão há muitos anos. Para combater essas feras, uma unidade militar de elite conhecida como Corpo de Defesa arrisca suas vidas diariamente para proteger os civis.</p>
+                    <a href="#" class="ler-agora-btn">Ler Agora</a>
                 </div>
-                <div class="input-box">
-                    <span class="icon"></span>
-                    <input type="password" placeholder="Senha" required>
-                    <label for="Password"></label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox"> Eu aceito os termos e condições.</label>
-    
-                </div>
-                <button type="submit" class="btn">Registrar</button>
-                <div class="login-register">
-                <p>Já tem uma conta ?
-                    <a href="#" class="login-link">Entrar</a>
-                </p>
             </div>
-            </form>
         </div>
+
+        <div class="slide">
+            <div class="manga-box">
+                <div class="image">
+                    <img src="assets/img/slider/thumbnail.avif" alt="Capa do Mangá">
+                </div>
+                <div class="info">
+                    <h3>Último Capítulo: Capítulo 1445</h3><br>
+                    <h2>Hajime no Ippo – The First Step</h2><br>
+                    <p>Aventura, Ação, Fantasia</p><br>
+                    <p>Makunouchi Ippo, um garoto humilde do segundo ano colegial que na maior parte do seu tempo livre ajuda a sua mãe no trabalho, que possui uma loja que aluga barcos para pesca. Por causa disto, ele não consegue tempo para fazer amigos, e o pior, ele é alvo de Umezawa e sua gangue</p>
+                    <a href="#" class="ler-agora-btn">Ler Agora</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="manga-box">
+                <div class="image">
+                    <img src="assets/img/slider/thumbnail.jpg" alt="Capa do Mangá">
+                </div>
+                <div class="info">
+                    <h3>Último Capítulo: Capítulo Especial 02</h3><br>
+                    <h2>Naruto</h2><br>
+                    <p>Aventura, Ação, Fantasia</p><br>
+                    <p>Antes do nascimento de Naruto, uma grande raposa demônio atacou a Vila Oculta da Folha. O 4º Hokage da Aldeia da Folha selou o demônio dentro do recém-nascido Naruto, fazendo com que ele crescesse sem saber odiado por seus colegas aldeões.</p>
+                    <a href="#" class="ler-agora-btn">Ler Agora</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
+<div class="slider-nav"></div>
 
  <!--=== Começa configs do Slide===-->
     <main>
@@ -253,9 +259,9 @@
                             <h4>Solo Leveling</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Capitulo 500</a>
-                                    <a href="#">Capitulo 499</a>
-                                    <a href="#">Capitulo 498</a>
+                                    <a href="#">Capitulo 200</a>
+                                    <a href="#">Capitulo 199</a>
+                                    <a href="#">Capitulo 198</a>
                                 </li>
                             </ul>
                         </div>
@@ -266,9 +272,9 @@
                             <h4>Tales of Daemon and Gods</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Capitulo 387</a>
-                                    <a href="#">Capitulo 386</a>
-                                    <a href="#">Capitulo 385</a>
+                                    <a href="#">Capitulo 462</a>
+                                    <a href="#">Capitulo 461</a>
+                                    <a href="#">Capitulo 460</a>
                                 </li>
                             </ul>
                         </div>
@@ -279,9 +285,9 @@
                             <h4>The Beginning After End</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Capitulo 500</a>
-                                    <a href="#">Capitulo 499</a>
-                                    <a href="#">Capitulo 498</a>
+                                    <a href="#">Capitulo 175.11</a>
+                                    <a href="#">Capitulo 175</a>
+                                    <a href="#">Capitulo 174</a>
                                 </li>
                             </ul>
                         </div>
@@ -292,9 +298,9 @@
                             <h4>Martial Peak</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Capitulo 500</a>
-                                    <a href="#">Capitulo 499</a>
-                                    <a href="#">Capitulo 498</a>
+                                    <a href="#">Capitulo 3665</a>
+                                    <a href="#">Capitulo 3664</a>
+                                    <a href="#">Capitulo 3663</a>
                                 </li>
                             </ul>
                         </div>
@@ -305,126 +311,126 @@
                             <h4>Global Martial Artist</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Capitulo 500</a>
-                                    <a href="#">Capitulo 499</a>
-                                    <a href="#">Capitulo 498</a>
+                                    <a href="#">Capitulo 115</a>
+                                    <a href="#">Capitulo 114</a>
+                                    <a href="#">Capitulo 113</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="mangas">
-                        <img src="assets/img/slides/avatar-1.png" alt="">
+                        <img src="assets/img/slides/avatar-6.jpg" alt="">
                         <div class="infos">
-                            <h4>Solo Leveling</h4>
+                            <h4>Eleceed</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Capitulo 500</a>
-                                    <a href="#">Capitulo 499</a>
-                                    <a href="#">Capitulo 498</a>
+                                    <a href="#">Capitulo 281</a>
+                                    <a href="#">Capitulo 280</a>
+                                    <a href="#">Capitulo 279</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="mangas">
-                        <img src="assets/img/slides/avatar-2.png" alt="">
+                        <img src="assets/img/slides/avatar-7.jpg" alt="">
                         <div class="infos">
-                            <h4>Tales of Daemon and Gods</h4>
+                            <h4>Mo Huang Da Guan Jia – Magic Emperor</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Capitulo 500</a>
-                                    <a href="#">Capitulo 499</a>
-                                    <a href="#">Capitulo 498</a>
+                                    <a href="#">Capitulo 494</a>
+                                    <a href="#">Capitulo 493</a>
+                                    <a href="#">Capitulo 492</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="mangas">
-                        <img src="assets/img/slides/avatar-3.png" alt="">
+                        <img src="assets/img/slides/avatar-8.jpg" alt="">
                         <div class="infos">
-                            <h4>The Beginning After End</h4>
+                            <h4>Archmage Transcending through Regression</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Capitulo 500</a>
-                                    <a href="#">Capitulo 499</a>
-                                    <a href="#">Capitulo 498</a>
+                                    <a href="#">Capitulo 82</a>
+                                    <a href="#">Capitulo 81</a>
+                                    <a href="#">Capitulo 80</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="mangas">
-                        <img src="assets/img/slides/avatar-4.png" alt="">
+                        <img src="assets/img/slides/avatar-9.jpg" alt="">
                         <div class="infos">
-                            <h4>Martial Peak</h4>
+                            <h4>Jujutsu Kaisen</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Capitulo 500</a>
-                                    <a href="#">Capitulo 499</a>
-                                    <a href="#">Capitulo 498</a>
+                                    <a href="#">Capitulo 248</a>
+                                    <a href="#">Capitulo 247</a>
+                                    <a href="#">Capitulo 246</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="mangas">
-                        <img src="assets/img/slides/avatar-5.png" alt="">
+                        <img src="assets/img/slides/avatar-10.jpg" alt="">
                         <div class="infos">
-                            <h4>Global Martial Artist</h4>
+                            <h4>Damn Magic Swords</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Capitulo 500</a>
-                                    <a href="#">Capitulo 499</a>
-                                    <a href="#">Capitulo 498</a>
+                                    <a href="#">Capitulo 11</a>
+                                    <a href="#">Capitulo 10</a>
+                                    <a href="#">Capitulo 9</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="mangas">
-                        <img src="assets/img/slides/avatar-1.png" alt="">
+                        <img src="assets/img/slides/avatar-11.jpg" alt="">
                         <div class="infos">
-                            <h4>Solo Leveling</h4>
+                            <h4>Regressor of the Fallen Family</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Capitulo 500</a>
-                                    <a href="#">Capitulo 499</a>
-                                    <a href="#">Capitulo 498</a>
+                                    <a href="#">Capitulo 9</a>
+                                    <a href="#">Capitulo 8</a>
+                                    <a href="#">Capitulo 7</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="mangas">
-                        <img src="assets/img/slides/avatar-2.png" alt="">
+                        <img src="assets/img/slides/avatar-12.jpg" alt="">
                         <div class="infos">
-                            <h4>Tales of Daemon and Gods</h4>
+                            <h4>Witch Hunter</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Capitulo 500</a>
-                                    <a href="#">Capitulo 499</a>
-                                    <a href="#">Capitulo 498</a>
+                                    <a href="#">Capitulo 6</a>
+                                    <a href="#">Capitulo 5</a>
+                                    <a href="#">Capitulo 4</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="mangas">
-                        <img src="assets/img/slides/avatar-3.png" alt="">
+                        <img src="assets/img/slides/avatar-13.jpg" alt="">
                         <div class="infos">
-                            <h4>The Beginning After End</h4>
+                            <h4>The Redemption Of Earl Nottingham</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Capitulo 500</a>
-                                    <a href="#">Capitulo 499</a>
-                                    <a href="#">Capitulo 498</a>
+                                    <a href="#">Capitulo 14</a>
+                                    <a href="#">Capitulo 13</a>
+                                    <a href="#">Capitulo 12</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="mangas">
-                        <img src="assets/img/slides/avatar-4.png" alt="">
+                        <img src="assets/img/slides/avatar-14.jpg" alt="">
                         <div class="infos">
-                            <h4>Martial Peak</h4>
+                            <h4>Trinity Blood</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Capitulo 500</a>
-                                    <a href="#">Capitulo 499</a>
-                                    <a href="#">Capitulo 498</a>
+                                    <a href="#">Capitulo 12</a>
+                                    <a href="#">Capitulo 11</a>
+                                    <a href="#">Capitulo 10</a>
                                 </li>
                             </ul>
                         </div>
@@ -538,10 +544,10 @@
 
                 <div class="mangaka-read">
                     <div class="mangas-img">
-                        <img src="assets/img/slides/avatar-2.png" alt="">
+                        <img src="assets/img/slides/avatar-6.jpg" alt="">
 
                         <div class="infos-read">
-                            <h4>Tales of Daemon and Gods</h4>
+                            <h4>Eleceed</h4>
                             <ul>
                                 <li><p>Generos: </p>
                                     <a href="#">Ação</a><p>,</p>
@@ -557,9 +563,9 @@
                 </div>
                 <div class="mangaka-read">
                     <div class="mangas-img">
-                        <img src="assets/img/slides/avatar-1.png" alt="">
+                        <img src="assets/img/slides/avatar-8.jpg" alt="">
                         <div class="infos-read">
-                            <h4>Solo Leveling</h4>
+                            <h4>Archmage Transcending through Regression</h4>
                                 <ul>
                                     <li><p>Generos: </p>
                                         <a href="#">Ação</a><p>,</p>
@@ -576,10 +582,10 @@
                 </div>
                 <div class="mangaka-read">
                     <div class="mangas-img">
-                        <img src="assets/img/slides/avatar-4.png" alt="">
+                        <img src="assets/img/slides/avatar-14.jpg" alt="">
                     
                         <div class="infos-read">
-                            <h4>Martial Perk</h4>
+                            <h4>Trinity Blood</h4>
                         
                                 <ul>
                                     <li><p>Generos: </p>
@@ -598,10 +604,10 @@
                 </div>
                 <div class="mangaka-read">
                     <div class="mangas-img">
-                        <img src="assets/img/slides/avatar-3.png" alt="">
+                        <img src="assets/img/slides/avatar-13.jpg" alt="">
                     
                         <div class="infos-read">
-                            <h4>The Beginning After End</h4>
+                            <h4>The Redemption Of Earl Nottingham</h4>
                         
                                 <ul>
                                     <li><p>Generos: </p>
@@ -618,10 +624,10 @@
                 </div>
                 <div class="mangaka-read">
                     <div class="mangas-img">
-                        <img src="assets/img/slides/avatar-5.png" alt="">
+                        <img src="assets/img/slides/avatar-10.jpg" alt="">
                     
                         <div class="infos-read">
-                            <h4>Global Martial Artist</h4>
+                            <h4>Damn Magic Swords</h4>
                         
                                 <ul>
                                     <li><p>Generos: </p>
@@ -637,10 +643,10 @@
                 </div>
                 <div class="mangaka-read">
                     <div class="mangas-img">
-                        <img src="assets/img/slides/avatar-2.png" alt="">
+                        <img src="assets/img/slides/avatar-9.jpg" alt="">
 
                         <div class="infos-read">
-                            <h4>Tales of Daemon and Gods</h4>
+                            <h4>Jujutsu Kaisen</h4>
                             <ul>
                                 <li><p>Generos: </p>
                                     <a href="#">Ação</a><p>,</p>
@@ -656,9 +662,9 @@
                 </div>
                 <div class="mangaka-read">
                     <div class="mangas-img">
-                        <img src="assets/img/slides/avatar-1.png" alt="">
+                        <img src="assets/img/slides/avatar-11.jpg" alt="">
                         <div class="infos-read">
-                            <h4>Solo Leveling</h4>
+                            <h4>Regressor of the Fallen Family</h4>
                                 <ul>
                                     <li><p>Generos: </p>
                                         <a href="#">Ação</a><p>,</p>
@@ -675,10 +681,10 @@
                 </div>
                 <div class="mangaka-read">
                     <div class="mangas-img">
-                        <img src="assets/img/slides/avatar-4.png" alt="">
+                        <img src="assets/img/slides/avatar-7.jpg" alt="">
                     
                         <div class="infos-read">
-                            <h4>Martial Perk</h4>
+                            <h4>Mo Huang Da Guan Jia – Magic Emperor</h4>
                         
                                 <ul>
                                     <li><p>Generos: </p>
@@ -700,19 +706,19 @@
         </div>
 
     </main>
+    
+    <!--BOTÃO VOLTAR AO TOPO-->
+    <button id="scrollToTopBtn" title="Voltar ao Topo">&#8593;</button>
 
     <footer>
         <div class="footer">
             <div>
                 <img src="assets/img/fire-mangas-high-resolution-logo-transparent.png" alt="Fire Mangas" width="150px">
             </div>
-            <div class="top-btn">
-              <a class="top" href="#">/\</a>
+            <div id="footer_copyright">
+                &#169
+                2023 all rights reserved
             </div>
-        </div>
-        <div id="footer_copyright">
-            &#169
-            2023 all rights reserved
         </div>
     </footer>
 
@@ -726,6 +732,10 @@
           </div>
         </div>
       </div>
+      <!--=============== SCRIPT DO PRIMEIRO SLIDE ===============-->
+      <script src="assets/js/slide1.js"></script>
+
+      <!--=============== scrip ===============-->
     <script src="assets/js/script.js"></script>
 
     <!--=============== SWIPER JS ===============-->
@@ -733,5 +743,7 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+    <!--=============== BARRA DE PESQUISA ===============-->
+    <script src="assets/js/search.js"></script>
 </body>
 </html>

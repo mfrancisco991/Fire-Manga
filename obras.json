@@ -1,0 +1,13 @@
+[
+    { "nome": "Infinite Mage", "url": "./obras/Manhwa/Infinite-Mage/Infinite-Mage.html", "imagem": "./obras/Manhwa/infinite-Mage/infinite-mage.jpg" },
+
+    { "nome": "Kalli the Champion", "url": "./obras/Manhwa/Kalli-the-Champion/Kalli-the-Champion.html", "imagem": "./obras/Manhwa/Kalli-the-Champion/Kalli-the-Champion.webp" },
+
+    { "nome": "Dragon Ball Super", "url": "dragon_ball_super/pagina.html", "imagem": "./obras/Manhwa/infinite Mage/infinite mage.jpg" },
+
+    { "nome": "Dragon Ball GT", "url": "dragon_ball_gt/pagina.html", "imagem": "./caminho/para/dragon_ball_z.jpg" },
+
+    { "nome": "Dragon Ball Classic", "url": "dragon_ball_gt/pagina.html", "imagem": "./caminho/para/dragon_ball_z.jpg" },
+    
+    { "nome": "Dragon Ball AF", "url": "dragon_ball_af/pagina.html", "imagem": "./caminho/para/dragon_ball_z.jpg" }
+]

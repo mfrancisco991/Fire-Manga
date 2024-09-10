@@ -5,8 +5,8 @@
 :root {
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: #f6ae31;
-  --first-color-alt: hsl(32, 75%, 50%);
+  --first-color: #007bff;
+  --first-color-alt: #004a99;
   --white-color: hsl(212, 4%, 95%);
   --corlogo: #FF2F0A;
   --cor-container: #24252a;

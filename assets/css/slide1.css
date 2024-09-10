@@ -1,0 +1,95 @@
+.slider-container {
+    width: 1000px;
+    height: 340px;
+    margin: 20px auto;
+    overflow: hidden;
+    margin: 80px auto 0;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+}
+
+.manga-box {
+    display: flex;
+    width: 100%; /* Ajuste a largura conforme necessário */
+    height: 100%;
+    background-color: #24252a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra (opcional) */
+}
+
+.image {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    width: 50%;
+    padding: 20px;
+    cursor: grab;
+    color: #fff;
+}
+
+
+.ler-agora-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.ler-agora-btn:hover {
+    background-color: #0056b3;
+}
+
+.slider-nav {
+    text-align: center;
+    margin-top: 10px;
+}
+.slider.grabbing {
+    cursor: grabbing;
+}
+
+.slider-nav-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-nav-dot.active {
+    background-color: #007bff;
+}
+
+@media screen and (max-width: 768px) {
+    .slider-container {
+        display: none;
+        overflow: hidden;
+    }
+}

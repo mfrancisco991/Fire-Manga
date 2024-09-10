@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+    <!--=============== CSS DA PAGINA===============-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--=============== CSS DA PAG. RESULTADOS ===============-->
+    <link rel="stylesheet" href="./assets/css/resultados.css">
+
+    <title>Fire Mangas</title>
+</head>
+
+<body>
+    <header id="menu">
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/fire-mangas-high-resolution-logo-transparent.png" alt="Fire Mangas" width="160px">
+                </a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Mangas</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Recentes</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Mais Lidos</a></li>
+                </ul>
+            </div>
+
+            <div class="right">
+                <!--<form action="./pesquisa.php" method="get" autocomplete="off">-->
+                    <div class="search-bar">
+                        <input type="text" id="search-txt" placeholder="Pesquisar..." onkeypress="handleKeyPress(event)">
+                        <button onclick="searchManga()" type="submit" class="sbutton"><img src="./assets/img/loupe_black.svg" alt="lupa" height="13" width="15"></button>
+                    </div>
+               <!--</form>-->
+            </div>
+            <div>
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt=""></button>
+                </div>
+            </div>
+        </nav>
+            
+            <div class="mobile-menu">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                </ul>
+            </div>
+    </header>
+    <main>
+        <div id="resultados" class="resultado-container"></div>
+        <script src="/assets/js/resultados.js"></script>
+    </main>
+    
+    <!--BOTÃO VOLTAR AO TOPO-->
+    <button id="scrollToTopBtn" title="Voltar ao Topo">&#8593;</button>
+
+    <footer>
+        <div class="footer">
+            <div>
+                <img src="assets/img/fire-mangas-high-resolution-logo-transparent.png" alt="Fire Mangas" width="150px">
+            </div>
+            <div id="footer_copyright">
+                &#169
+                2023 all rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <!--CONFIGURAÇOES DE COOKIES DO SITE-->
+    <div class="cookie" id="cookie">
+        <div class="cookie-txt">
+          <p>Este site usa cookies.
+          Usamos cookies para analisar o tráfego do site e otimizar sua experiência nele. Ao aceitar nosso uso de cookies, seus dados serão agregados com os dados de todos os demais usuários.</p>
+          <div class="cookie-btn">
+            <button onclick="aceito()">Aceito</button>
+          </div>
+        </div>
+      </div>
+
+      <!--=============== scrip ===============-->
+    <script src="assets/js/script.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+     <!--=============== BARRA DE PESQUISA ===============-->
+     <script src="assets/js/search.js"></script>
+</body>
+</html>

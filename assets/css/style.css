@@ -1,7 +1,8 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
 
 :root {
-    --first-color: #f6ae31;
+    --first-color: #007bff;
     --cor-menu: #050505;
     --cor-body: #585858;
     --cor-logo: #FF2F0A;
@@ -18,14 +19,17 @@ header {
     box-shadow: 0px 3px 10px #464646;
     width: 100%;
     position: fixed;
-    z-index: 98;
+    z-index: 99;
+    top: 0;
 }
 
 .nav-bar {
     background-color: var(--cor-menu);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1.5rem 5rem;
+    height: 12px;
 }
 .nav-bar.scroll {
     background-color: #050505d8; /* Altere a opacidade conforme necessário */
@@ -81,7 +85,7 @@ header {
     padding: 4px;
   }
   
-  .search-txt {
+  #search-txt {
     border-radius: 3px;
     border: none;
     font-size: 15px;
@@ -90,7 +94,7 @@ header {
     background-color: #fff;
   }
   
-  .search-txt:focus-visible {
+  #search-txt:focus-visible {
     outline: none;
   }
 
@@ -103,25 +107,6 @@ header {
     background-color: #fff;
   }
 
-.login-button button {
-    border: none;
-    padding-left: 40px;
-    padding-top: 4px;
-    border-radius: 5px;
-    background-color: transparent;
-}
-
-.login-button button a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-.login-button button img:hover {
-    background: url('../img/login1.svg');
-    transform: translate(1px, 1px);
-}
 
 .mobile-menu-icon {
     display: none;
@@ -135,21 +120,32 @@ header {
     display: none;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 768px) {
     .nav-bar {
         padding: 1rem 1rem;
     }
     .login-button button {
         padding: 8px 0 0 0;
         margin: 0px;
-        
     }
     .nav-item {
         display: none;
     }
     .search-bar {
-        display: none;
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 24px;
     }
+    .search-bar button {
+        width: 20px;
+        background-color: #fff;
+    }
+    #search-txt {
+        height: 24px;
+        width: 30px;
+        background-color: #fff;
+      }
     .mobile-menu-icon {
         display: block;
     }
@@ -159,13 +155,9 @@ header {
         cursor: pointer;
     }
 
-    .search-bar-menu {
-        display: block;
+    #search-txt {
         text-align: center;
-    }
-    .search-txt {
-        text-align: center;
-        padding: 0.4em;
+        padding: 2px;
         width: 91%;
     }
 
@@ -192,7 +184,6 @@ header {
     .containers {
         display: flex;
         flex-direction: column;
-        
     }
 }
 
@@ -402,8 +393,8 @@ main {
     max-width: 1000px;
     width: 100%;
 
-    margin: 90px auto 0;
-    padding: 20px;
+    margin: auto;
+    padding: 40px 0;
 
     background-color: transparent; /* COLOCAR TRANSPARENTE*/
     color: white;
@@ -518,42 +509,50 @@ main {
     border-radius: 4px 4px 0 0;
 }
 
+/*CONFIGURAÇÕES DO BOTÃO VOLTAR AO TOPO*/
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: var(--cor-container);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#scrollToTopBtn:hover {
+    color: var(--cor-logo);
+}
+
+
+/* CONFIGURAÇÕES DO RODAPE*/
 footer {
     display: block;
 }
 
 .footer {
-    background-color: var(--cor-container);
+    background-color: var(--cor-menu);
     padding: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
 }
 
-footer a.top {
-  border-radius: 4px;
-  padding: 10px 21px;
-  background-color: var(--cor-logo);
-  color: var(--cor-menu);
-  font-weight: bold;
-  text-decoration: none;
+.footer img {
+    margin-right: 20px;
 }
 
-footer a.top:hover {
-  text-decoration: none;
-}
 #footer_copyright {
     display: flex;
     justify-content: center;
     color: white;
-    background-color: var(--cor-menu);
     font-size: 0.9rem;
     padding: 0.5rem;
     font-weight: 100;
-}
-
-@media screen and (max-width: 500px) {
-    
 }
 
 /*CAIXA DE COOKIE*/
@@ -568,6 +567,7 @@ footer a.top:hover {
   transform: translate(-50%);
   border-radius: 10px 10px 0px 0px;
   display: none;
+  z-index: 999;
 }
 .cookie.mostrar {
   display: block;

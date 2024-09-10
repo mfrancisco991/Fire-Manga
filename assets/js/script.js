@@ -8,16 +8,6 @@ function menuShow() {
         document.querySelector('.icon').src = "assets/img/close_white_36dp.svg";
     }
 }
-function searchShow() {
-    let searchMenu = document.querySelector('.search-menu');
-    if (searchMenu.classList.contains('abrir')) {
-        searchMenu.classList.remove('abrir');
-        document.querySelector('.icone').src = "assets/img/search1.svg";
-    } else {
-        searchMenu.classList.add('abrir');
-        document.querySelector('.icone').src = "assets/img/searchx.svg";
-    }
-}
 
 var msgCookie = document.getElementById('cookie')
 
@@ -31,3 +21,23 @@ if(localStorage.lgpd == 'sim'){
 }else{
   msgCookie.classList.add('mostrar')
 }
+
+// CONFIGURAÇOES DO BOTÃO VOLTAR AO TOPO
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// Adiciona um ouvinte de evento de rolar
+window.addEventListener('scroll', () => {
+    // Exibe ou oculta o botão dependendo da posição de rolagem
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
+
+// Adiciona um ouvinte de evento de clique ao botão
+scrollToTopBtn.addEventListener('click', () => {
+    // Rola suavemente para o topo da página
+    document.body.scrollTop = 0; // Para navegadores da web
+    document.documentElement.scrollTop = 0; // Para navegadores modernos
+});
